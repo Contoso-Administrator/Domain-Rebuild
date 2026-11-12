@@ -4,6 +4,7 @@
 
 The main advantage of this script is that it stores domain credentials as a secured (AES) string (which are then deleted as part of the final step) and there are loops in place to ensure domain connectivity for the domain join and group policy update (the connectivity loops also test domain credentials and allow you to re-enter them if invalid, pre-domain join). Below is a general overview of the domain rebuild and what to expect during each phase of the process.
 
+#
 <ins>Phase 1:</ins> Login as local admin, copy over the 'Domain Rebuild' folder, start the ‘Domain Rebuild’ script, enter domain join credentials, the 'Domain Rebuild' folder is moved to root, VPN install, (1st) reboot
 
 <ins>Phase 2:</ins> Login as local admin, the script will start and loop until the VPN is turned on, login to the VPN, wait for the script to confirm domain connectivity before it domain joins the computer, (2nd) reboot 
