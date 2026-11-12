@@ -21,11 +21,11 @@ You will need to customize this script to specify the local admin that is being 
 <ins>DomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Set the variable for domain and OU location you plan on domain joining the computer to (lines 8-11)
-<br />
+<br /><br />
 <ins>PostDomainRebuild.ps1</ins>
 - Configure the installs for your tech stack (lines 28-30)
 - Configure the install for your user-facing VPN (lines 32-35)
-<br /><br />
+<br /><br /><br />
 **Important things to know**
 - System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
 - The ‘Domain Rebuild’ folder must be placed on Desktop of specified local admin unaltered or it will break the script.
