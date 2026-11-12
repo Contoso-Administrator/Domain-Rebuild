@@ -1,8 +1,8 @@
 # Domain-Rebuild
 
-&emsp;The purpose of this script is to quickly rebuild the tech stack on a Windows computer to bring it back into your company's domain, if other options are not available. This script works in three separate phases and is automatically started via Task Scheduler at the login of ONLY the specified local admin account. The only user input needed to complete this process is to login to the specified local admin account (x3), and login to VPN (x2), everything else is automated. You will need edit the variables in the 'Variables to change' section below for this script to work.
+<p>The purpose of this script is to quickly rebuild the tech stack on a Windows computer to bring it back into your company's domain, if other options are not available. This script works in three separate phases and is automatically started via Task Scheduler at the login of ONLY the specified local admin account. The only user input needed to complete this process is to login to the specified local admin account (x3), and login to VPN (x2), everything else is automated. You will need edit the variables in the 'Variables to change' section below for this script to work.
 
-The main advantage of this script is that it stores domain credentials as a secured (AES) string (which are then deleted as part of the final step) and there are loops in place to ensure domain connectivity for the domain join and group policy update (the connectivity loops also test domain credentials and allow you to re-enter them if invalid, pre-domain join). Below is a general overview of the domain rebuild and what to expect during each phase of the process.
+The main advantage of this script is that it stores domain credentials as a secured (AES) string (which are then deleted as part of the final step) and there are loops in place to ensure domain connectivity for the domain join and group policy update (the connectivity loops also test domain credentials and allow you to re-enter them if invalid, pre-domain join). Below is a general overview of the domain rebuild and what to expect during each phase of the process.</p>
 <br /><br />
 
 <ins>Phase 1:</ins> Login as local admin, copy over the 'Domain Rebuild' folder, start the ‘Domain Rebuild’ script, enter domain join credentials, the 'Domain Rebuild' folder is moved to root, VPN install, (1st) reboot
@@ -16,20 +16,22 @@ The main advantage of this script is that it stores domain credentials as a secu
 You will need to customize this script to specify the local admin that is being used (because Task Scheduler triggers the script based on the login of that account), configure installs, and set what location you would like your computer to domain joined to:
 <br /><br />
 
-<ins>PreDomainRebuild.ps1</ins>
+&emsp;<ins>PreDomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Configure your VPN install for the domain join (lines 25 & 26)
 
-<ins>DomainRebuild.ps1</ins>
+&emsp;<ins>DomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Set the variable for domain and OU location you plan on domain joining the computer to (lines 8-11)
 
-<ins>PostDomainRebuild.ps1</ins>
+&emsp;<ins>PostDomainRebuild.ps1</ins>
 - Configure the installs for your tech stack (lines 28-30)
 - Configure the install for your user-facing VPN (lines 32-35)
+
 #
 
 ><h3>Important things to know</h3>
+
 >- System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
 >- The ‘Domain Rebuild’ folder must be placed on Desktop of specified local admin unaltered or it will break the script.
 >- DO NOT close any of the PowerShell windows that open, doing so will halt the script. Re-login to the specified local admin to restart that phase of the domain rebuild.
