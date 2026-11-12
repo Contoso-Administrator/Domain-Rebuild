@@ -10,6 +10,7 @@ The main advantage of this script is that it stores domain credentials as a secu
 
 <ins>Phase 3:</ins> Domain join (takes ~4min, depending), Login as local admin, the script will start and loop until the VPN is turned on, login to VPN, script runs gpupdate to populate computer certificates, installs the tech stack, deletes the 'Domain Rebuild' folders, (3rd) reboot
 
+<br /><br />
 **Variables to change**
 You will need to customize this script to specify the local admin that is being used (because Task Scheduler triggers the script based on the login of that account), configure installs, and set what location you would like your computer to domain joined to:
 
@@ -17,14 +18,17 @@ You will need to customize this script to specify the local admin that is being 
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Configure your VPN install for the domain join (lines 25 & 26)
 
+<br />
 <ins>DomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Set the variable for domain and OU location you plan on domain joining the computer to (lines 8-11)
 
+<br />
 <ins>PostDomainRebuild.ps1</ins>
 - Configure the installs for your tech stack (lines 28-30)
 - Configure the install for your user-facing VPN (lines 32-35)
 
+<br /><br />
 **Important things to know**
 - System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
 - The ‘Domain Rebuild’ folder must be placed on Desktop of specified local admin unaltered or it will break the script.
