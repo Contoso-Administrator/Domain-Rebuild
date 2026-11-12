@@ -31,7 +31,6 @@ You will need to customize this script to specify the local admin that is being 
 
 #
 
-<br />
 ><h3>Important things to know</h3>
 >
 >- System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
