@@ -9,7 +9,7 @@ The main advantage of this script is that it stores domain credentials as a secu
 <ins>Phase 2:</ins> Login as local admin, the script will start and loop until the VPN is turned on, login to the VPN, wait for the script to confirm domain connectivity before it domain joins the computer, (2nd) reboot 
 
 <ins>Phase 3:</ins> Domain join (takes ~4min, depending), Login as local admin, the script will start and loop until the VPN is turned on, login to VPN, script runs gpupdate to populate computer certificates, installs the tech stack, deletes the 'Domain Rebuild' folders, (3rd) reboot
-#
+<br />
 
 **Variables to change**
 <br />
