@@ -30,7 +30,7 @@ You will need to customize this script to specify the local admin that is being 
 
 #
 
-><h3>Important things to know</h3>
+<h3>Important things to know</h3>
 
 >- System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
 >- The ‘Domain Rebuild’ folder must be placed on Desktop of specified local admin unaltered or it will break the script.
