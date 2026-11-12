@@ -33,10 +33,10 @@ You will need to customize this script to specify the local admin that is being 
 
 <h3>Important things to know</h3>
 
->- System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
->- The ‘Domain Rebuild’ folder must be placed on Desktop of specified local admin unaltered or it will break the script.
->- DO NOT close any of the PowerShell windows that open, doing so will halt the script. Re-login to the specified local admin to restart that phase of the domain rebuild.
->- It is very important that you wait for at least ~4min after logging into local admin post domain join, so you can let domain policies update and apply (depending on your environment). This may cause the computer to become slow and unresponsive after login and it is best to let group policy updates finish before proceeding. Re-login to the specified local admin login if necessary to restart that phase of the domain rebuild.
->- The domain credentials are stored as a AES secure string in "$env:ProgramData\DomainRebuild", that folder is then deleted as part of the final step of Phase 3.
->- Task Scheduler tasks are deleted as the script proceeds to the next phase, each task is named after the script that created it (ex. the PreDomainRebuild task starts DomainRebuild.ps1 after the 1st reboot).
->- Task Scheduler tasks will only start at the login of the specified local admin account, even if the computer is on batteries and tasks are set to the highest run level.
+- System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
+- The ‘Domain Rebuild’ folder must be placed on Desktop of specified local admin unaltered or it will break the script.
+- DO NOT close any of the PowerShell windows that open, doing so will halt the script. Re-login to the specified local admin to restart that phase of the domain rebuild.
+- It is very important that you wait for at least ~4min after logging into local admin post domain join, so you can let domain policies update and apply (depending on your environment). This may cause the computer to become slow and unresponsive after login and it is best to let group policy updates finish before proceeding. Re-login to the specified local admin login if necessary to restart that phase of the domain rebuild.
+- The domain credentials are stored as a AES secure string in "$env:ProgramData\DomainRebuild", that folder is then deleted as part of the final step of Phase 3.
+- Task Scheduler tasks are deleted as the script proceeds to the next phase, each task is named after the script that created it (ex. the PreDomainRebuild task starts DomainRebuild.ps1 after the 1st reboot).
+- Task Scheduler tasks will only start at the login of the specified local admin account, even if the computer is on batteries and tasks are set to the highest run level.
