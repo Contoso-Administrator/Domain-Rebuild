@@ -28,6 +28,7 @@ You will need to customize this script to specify the local admin that is being 
 - Place the files for your installs (.msi/.exe/etc) in the ~\Domain Rebuild\Resources folder
 - Configure the install for your user-facing VPN (lines 32-35)
 <br />
+
 #
 
 <h3>Important things to know</h3>
