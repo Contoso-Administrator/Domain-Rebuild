@@ -28,7 +28,7 @@ You will need to customize this script to specify the local admin that is being 
 <ins>PostDomainRebuild.ps1</ins>
 - Configure the installs for your tech stack (lines 28-30)
 - Configure the install for your user-facing VPN (lines 32-35)
-|           
+
 #
 
 **Important things to know**
