@@ -1,4 +1,4 @@
-# Domain-Rebuild
+# Domain Rebuild
 
 <p>The purpose of this script is to quickly rebuild the tech stack on a Windows computer to bring it back into your company's domain, if other options are not available. This script works in three separate phases and is automatically started via Task Scheduler at the login of ONLY the specified local admin account. The only user input needed to complete this process is to login to the specified local admin account (x3), and login to VPN (x2), everything else is automated. You will need edit the variables in the 'Variables to change' section below for this script to work.
 
