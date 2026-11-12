@@ -16,15 +16,15 @@ The main advantage of this script is that it stores domain credentials as a secu
 You will need to customize this script to specify the local admin that is being used (because Task Scheduler triggers the script based on the login of that account), configure installs, and set what location you would like your computer to domain joined to:
 <br /><br />
 
-&emsp;&emsp;<ins>PreDomainRebuild.ps1</ins>
+&emsp;<ins>PreDomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Configure your VPN install for the domain join (lines 25 & 26)
 
-&emsp;&emsp;<ins>DomainRebuild.ps1</ins>
+&emsp;<ins>DomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Set the variable for domain and OU location you plan on domain joining the computer to (lines 8-11)
 
-&emsp;&emsp;<ins>PostDomainRebuild.ps1</ins>
+&emsp;<ins>PostDomainRebuild.ps1</ins>
 - Configure the installs for your tech stack (lines 28-30)
 - Configure the install for your user-facing VPN (lines 32-35)
 #
