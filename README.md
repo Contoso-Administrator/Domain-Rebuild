@@ -4,6 +4,7 @@
 
 The main advantage of this script is that it stores domain credentials as a secured (AES) string (which are then deleted as part of the final step) and there are loops in place to ensure domain connectivity for the domain join and group policy update (the connectivity loops also test domain credentials and allow you to re-enter them if invalid, pre-domain join). Below is a general overview of the domain rebuild and what to expect during each phase of the process.
 
+<br />
 <ins>Phase 1:</ins> Login as local admin, copy over the 'Domain Rebuild' folder, start the ‘Domain Rebuild’ script, enter domain join credentials, the 'Domain Rebuild' folder is moved to root, VPN install, (1st) reboot
 
 <ins>Phase 2:</ins> Login as local admin, the script will start and loop until the VPN is turned on, login to the VPN, wait for the script to confirm domain connectivity before it domain joins the computer, (2nd) reboot 
@@ -18,12 +19,10 @@ You will need to customize this script to specify the local admin that is being 
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Configure your VPN install for the domain join (lines 25 & 26)
 
-<br />
 <ins>DomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
 - Set the variable for domain and OU location you plan on domain joining the computer to (lines 8-11)
 
-<br />
 <ins>PostDomainRebuild.ps1</ins>
 - Configure the installs for your tech stack (lines 28-30)
 - Configure the install for your user-facing VPN (lines 32-35)
