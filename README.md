@@ -14,7 +14,7 @@ The main advantage of this script is that it stores domain credentials as a secu
 
 <h3>Variables to change</h3>
 You will need to customize this script to specify the local admin that is being used (because Task Scheduler triggers the script based on the login of that account), configure installs, and set what location you would like your computer to domain joined to:
-<br /><br />
+<br /><br /><br />
 
 &emsp;<ins>PreDomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
