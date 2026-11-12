@@ -26,7 +26,7 @@ You will need to customize this script to specify the local admin that is being 
 
 <ins>PostDomainRebuild.ps1</ins>
 - Configure the installs for your tech stack (lines 28-30)
-- Place the files for your installs (.msi/.exe/etc) in the ~\Domain Rebuild\Resources folder
+- Place the files for your installs (.msi/.exe/etc) and configurations in the folder: ~\Domain Rebuild\Resources
 - Configure the install for your user-facing VPN (lines 32-35)
 <br />
 
