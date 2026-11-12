@@ -17,8 +17,8 @@ You will need to customize this script to specify the local admin that is being 
 <br /><br />
 
 &emsp;<ins>PreDomainRebuild.ps1</ins>
-&emsp;- Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
-&emsp;- Configure your VPN install for the domain join (lines 25 & 26)
+- Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
+- Configure your VPN install for the domain join (lines 25 & 26)
 
 <ins>DomainRebuild.ps1</ins>
 - Set the variable for $LocalAdmin to the local admin account you plan on using (line 5)
