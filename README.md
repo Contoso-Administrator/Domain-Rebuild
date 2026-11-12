@@ -30,8 +30,8 @@ You will need to customize this script to specify the local admin that is being 
 - Configure the install for your user-facing VPN (lines 32-35)
 #
 
-<br />
 **Important things to know**
+<br />
 - System Drive and Desktop paths are variables and can be used with desktop re-direction/different system drive paths.
 - The ‘Domain Rebuild’ folder must be placed on Desktop of specified local admin unaltered or it will break the script.
 - DO NOT close any of the PowerShell windows that open, doing so will halt the script. Re-login to the specified local admin to restart that phase of the domain rebuild.
