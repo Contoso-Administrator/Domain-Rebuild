@@ -1,6 +1,6 @@
 # Domain Rebuild
 
-<p>&emsp;The purpose of this script is to quickly rebuild the tech stack on a Windows computer to bring it back into your company's domain, if other options are not available. This script works in three separate phases and is automatically started via Task Scheduler at the login of ONLY the specified local admin account. The only user input needed to complete this process is to login to the specified local admin account (x3), input domain credentials, and login to VPN (x2)- everything else is automated. You will need edit the variables in the 'Variables to change' section below for this script to work.
+<p>The purpose of this script is to quickly rebuild the tech stack on a Windows computer to bring it back into your company's domain, if other options are not available. This script works in three separate phases and is automatically started via Task Scheduler at the login of ONLY the specified local admin account. The only user input needed to complete this process is to login to the specified local admin account (x3), input domain credentials, and login to VPN (x2)- everything else is automated. You will need edit the variables in the 'Variables to change' section below for this script to work.
 
 The main advantage of this script is that it stores domain credentials as a secured (AES) string (which are then deleted as part of the final step) and there are loops in place to ensure domain connectivity for the domain join and group policy update (the connectivity loops also test domain credentials and allow you to re-enter them if invalid, pre-domain join). This is done because VPN connection quality can very depending on the network and can sometimes take awhile to connect. Below is a general overview of the domain rebuild and what to expect during each phase of the process:</p><br />
 
@@ -8,7 +8,7 @@ The main advantage of this script is that it stores domain credentials as a secu
 
 <ins>Phase 2:</ins> Login as local admin, the script will start and loop until the VPN is turned on, login to the VPN, wait for the script to confirm domain connectivity before it domain joins the computer, (2nd) reboot<br /><br /> 
 
-<ins>Phase 3:</ins> Domain join (takes ~4min, depending), Login as local admin, the script will start and loop until the VPN is turned on, login to VPN, script runs gpupdate to populate computer certificates, installs the tech stack, deletes the 'Domain Rebuild' folders, (3rd) reboot<br /><br />
+<ins>Phase 3:</ins> Domain join (takes ~4min, depending), Login as local admin, the script will start and loop until the VPN is turned on, login to VPN, script runs gpupdate to populate computer certificates, installs the tech stack, deletes the 'Domain Rebuild' folders, (3rd) reboot<br /><br /><br />
 #
 <br /><br />
 
