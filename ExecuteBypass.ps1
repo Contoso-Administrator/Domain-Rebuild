@@ -1,1 +1,0 @@
-powershell.exe -ExecutionPolicy Bypass -File "$([Environment]::GetFolderPath('Desktop'))\Domain Rebuild\PreDomainRebuild.ps1"
